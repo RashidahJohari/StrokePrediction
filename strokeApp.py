@@ -6,14 +6,11 @@ Created on Thu Oct 20 12:04:01 2022
 """
 
 import pandas as pd 
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
-from sklearn.metrics import confusion_matrix , accuracy_score, precision_score, recall_score
 
 df = pd.read_csv("healthcare-dataset-stroke-data.csv")
 

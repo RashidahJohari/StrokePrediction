@@ -3,3 +3,5 @@
 # Stroke Prediction: Classification Problem
 
 To view https://rashidahjohari-strokeprediction-strokeapp-ecard0.streamlitapp.com/
+
+To download dataset: https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset

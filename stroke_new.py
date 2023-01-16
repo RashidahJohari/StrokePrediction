@@ -58,8 +58,8 @@ df.drop(df[df['gender'] == 'Other'].index, inplace = True)
 categorical_data=df.select_dtypes(include=['object']).columns
 le=LabelEncoder()
 df[categorical_data]=df[categorical_data].apply(le.fit_transform)
-X = df.iloc[:, :-1]
-y = df.iloc[:, -1]
+X = df.iloc[:, :-1].values
+y = df.iloc[:, -1].values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 smote=SMOTE()
 X_train,y_train=smote.fit_resample(X_train,y_train)

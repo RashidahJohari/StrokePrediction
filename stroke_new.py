@@ -63,7 +63,7 @@ y = df.iloc[:, -1]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 smote=SMOTE()
 X_train,y_train=smote.fit_resample(X_train,y_train)
-model = LogisticRegression(solver='lbfgs')
+model = LogisticRegression(solver='liblinear')
 model.fit(X_train, y_train)
 y_pred = model.predict(data_df)
 

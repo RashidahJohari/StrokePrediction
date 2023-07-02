@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
-from imblearn.combine import SMOTEENN
+from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 import streamlit as st
@@ -61,7 +61,7 @@ df[categorical_data]=df[categorical_data].apply(le.fit_transform)
 X = df.iloc[:, :-1].values
 y = df.iloc[:, -1].values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-smote=SMOTEENN(random_state=101)
+smote=SMOTE(random_state=42)
 X_train,y_train=smote.fit_resample(X_train,y_train)
 model = LogisticRegression()
 model.fit(X_train, y_train)

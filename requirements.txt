@@ -3,5 +3,6 @@ pandas
 streamlit
 scikit-learn
 imblearn
+imbalanced-learn
 matplotlib
 seaborn
